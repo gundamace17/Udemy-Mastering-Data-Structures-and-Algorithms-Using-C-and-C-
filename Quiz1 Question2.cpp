@@ -23,3 +23,27 @@ int main()
     printf("%d\n", sum);
 }
 
+/*
+o/p: 2 0 4 8 0
+Explanation of the Algorithm:
+
+      foo(2048, 0)
+      /          \
+     /            \
+ k=8, j=204,     foo(204, 8)
+ sum=8           /         \
+(4th k printed) /           \
+               /             \
+           k=4, j=20,       foo(20, 12)
+           sum=12           /         \
+         (3rd k printed)   /           \
+                          /             \
+                      k=0, j=2,        foo(2, 12)
+                      sum=12           /        \
+                    (2nd k printed)   /          \
+                                     /            \
+                                 k=2, j=0,       foo(0, 14) -> n==0, end of the recursion
+                                 sum=14                     (5th sum printed in main fun)
+                              (1st k printed)
+  
+*/
