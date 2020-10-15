@@ -21,3 +21,25 @@ int main()
     return 0;
 }
 
+/*
+o/p: 312213444
+Expalanation of the Algorithm:
+
+                      print d=4
+            count(3) <----|
+           /        \     |
+          /          \    |
+         /            \   |      print d=4
+  print n=3            count(2) <----|
+  print d=1           /        \     |
+  d=d+1=2            /          \    |
+                    /            \   |
+             print n=2            count(1) <-----|
+             print d=2           /        \      |
+             d=d+1=3            /          \     |
+                               /            \    |
+                        print n=1            no more fun call
+                        print d=3            print d=4
+                        d=d+1=4
+
+*/
